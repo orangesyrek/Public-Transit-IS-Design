@@ -1,14 +1,14 @@
-# Analýza a návrh informačního systému
+### Analýza a návrh informačního systému
 
 ## 40: Jízdní řády MHD
 
-Vaším úkolem je vývoj webové aplikace, která poskytne uživatelům informaci o spojení ze zadaného místa A do zadaného místa B prostředky městské hromadné dopravy – viz např. obdobná aplikace na stránkách MHD Brno.
+Úkolem je vývoj webové aplikace, která poskytne uživatelům informaci o spojení mezi dvěma místy A a B prostředky městské hromadné dopravy. Příkladem podobné aplikace může být ta na stránkách MHD Brno.
 
 ## Cíl projektu
 
-Cílem projektu je analyzovat požadavky a navrhnout část informačního systému dle zvoleného tématu. Použité modelovací techniky a diagramy musí odpovídat objektově-orientované analýze a návrhu pomocí modelovacího jazyka UML.
+Cílem projektu je analyzovat požadavky a navrhnout část informačního systému dle zvoleného tématu. Při návrhu je nutné použít modelovací techniky a diagramy odpovídající objektově-orientované analýze a návrhu pomocí jazyka UML.
 
-Na projekt předmětu AIS navazuje projekt v předmětu PIS (Pokročilé informační systémy), kde by návrh systému vytvořený v AIS mohl být skutečně implementován v prostředí nějakého programovacího jazyka.
+Projekt z předmětu AIS navazuje na projekt v předmětu PIS (Pokročilé informační systémy), kde by návrh systému vytvořený v AIS mohl být implementován v konkrétním programovacím jazyce.
 
 Projekt se skládá ze dvou samostatně odevzdávaných a hodnocených částí:
 
@@ -16,6 +16,7 @@ Projekt se skládá ze dvou samostatně odevzdávaných a hodnocených částí:
    - Neformální specifikace
    - Prvotní analýza požadavků
    - Plán projektu
+
 2. **Analýza a návrh v první iteraci + Finální analýza a návrh**:
    - Specifikace případů užití
    - Doménový model (DM)
@@ -28,35 +29,34 @@ Projekt se skládá ze dvou samostatně odevzdávaných a hodnocených částí:
    - Přechody obrazovek uživatelského rozhraní
    - Akceptační testy
 
+Další požadavky pro řešení projektu (kromě instrukcí v šabloně výše):
 
+- V plánu projektu budou alespoň tři iterace.
+- Specifikace případů použití, tedy diagramy případů použití a podrobnější specifikace, budou vytvořeny alespoň pro tři případy užití se složitějšími scénáři (např. ne pouze zobrazení nebo úprava entit doménové třídy, tedy řádků tabulky databáze). Modely případů použití budou v první části (jako UML diagramy analýzy požadavků) i v druhé odevzdávané části každé iterace (včetně podrobnější specifikace).
+- Doménový model bude společný pro všechny případy užití.
+- Bude popsán jeden systémový diagram sekvence pro určité scénáře z popsaných případů užití.
+- Kontrakty systémových operací budou popisovat všechny operace ze systémového diagramu sekvence a budou zahrnovat alespoň tři operace.
+- Návrh základní architektury systému bude vycházet z architektonického vzoru a bude obsahovat jasně definovanou část s doménovými objekty (vrstva domény nebo jiná ekvivalentní vrstva dle zvoleného návrhového vzoru).
+- Zodpovědnosti tříd budou určeny pro všechny popsané systémové operace a pro další volané operace.
+- V návrhovém diagramu tříd budou uvedeny operace, které řeší všechny zodpovědnosti tříd, a to včetně vazby na standardní třídy dostupné v daném vývojovém prostředí (např. kolekce, datum apod.). Diagram bude obsahovat třídy z doménové vrstvy a alespoň jeden návrhový vzor.
+- Budou vytvořeny alespoň tři návrhové diagramy interakce pro všechny popsané systémové operace. Z těchto diagramů bude alespoň jeden diagram sekvence a alespoň jeden diagram komunikace. Systémový diagram sekvence není návrhovým diagramem interakce, jde o artefakt analýzy požadavků.
+- Budou popsány přechody obrazovek vztažené alespoň k jednomu popsanému případu užití.
+- Bude popsán akceptační test vztažený alespoň k jednomu popsanému případu užití.
+- Pro tvorbu UML diagramů můžete využít nástroj jako Visual Paradigm for UML.
 
-Na řešení projektu jsou kladeny dále následující požadavky (mimo instrukce k provedení uvedené v šabloně výše):
+Projekt se odevzdává postupně ve dvou výsledcích a následně probíhá závěrečná obhajoba:
 
-    - V plánu projektu budou alespoň tři iterace.
-    - Specifikace případů použití, tj. diagramy případů použití a podrobnější specifikace, budou vytvořeny alespoň pro tři případy užití se složitějšími scénáři (tj. ne například pouhé zobrazení/úprava entit nějaké doménové třídy, tedy řádků tabulky databáze). Modely případů použití budou v první (zde jen jako UML diagramy analýzy požadavků) i ve druhé odevzdávané části v každé iteraci (vč. podrobnější specifikace případů užití).
-    - Doménový model bude jeden společný pro všechny případy užití.
-    - Bude popsán jeden systémový diagram sekvence pro určitý scénář z popsaných případů užití.
-    - Kontrakty systémových operací budou popisovat všechny operace ze systémového diagramu sekvence a takové operace budou alespoň tři.
-    - Návrh základní architektury systému bude využívat některého z architektonických vzorů a musí mít jasně určenu část s doménovými objekty (vrstvu domény či jinou jí ekvivalentní dle použitého návrhového vzoru).
-    - Zodpovědnosti tříd budou určeny pro všechny popsané systémové operace a další jimi volané operace.
-    - V návrhovém diagramu tříd musí být uvedeny operace řešící všechny popsané zodpovědnosti tříd s případnou vazbou na standardní třídy dostupné v daném vývojovém prostředí či použitém implementačním rámci (např. třídy/rozhraní pro kolekce, datum, atp.). Musí zde být třídy z doménové vrstvy (vizte předchozí bod) a musí zde být viditelně a vhodně použit alespoň jeden návrhový vzor.
-    - Budou vytvořeny alespoň 3 návrhové diagramy interakce realizující všechny popsané systémové operace. Z těchto diagramů musí alespoň jeden být diagram sekvence a alespoň jeden musí být diagram komunikace. Systémový diagram sekvence není návrhovým diagramem interakce (je to artefakt analýzy požadavků).
-    - Budou popsány přechody obrazovek vztažené alespoň k jednomu popsanému případu užití.
-    - Bude popsán akceptační test vztažený alespoň k jednomu popsanému případu užití.
-    - Pro tvorbu UML diagramů můžete využít např. Visual Paradigm for UML.
+- Obhajoby projektů probíhají v posledním týdnu semestru a prvním týdnu zkouškového období.
+- Studenti se přihlásí na jeden z termínů obhajoby, které budou vypsány v informačním systému. Za každý tým se na obhajobu přihlašuje pouze jeden student.
+- Obhajoba projektu by měla trvat přibližně 10 minut. Všichni členové týmu musí být připraveni obhajovat některou z odevzdávaných částí. Kvalita obhajoby a připravenost jsou hodnoceny. Pokud se během obhajoby prokáže, že studenti nerozumí odevzdávaným diagramům, mohou být uděleny záporné body.
+- Součástí obhajoby je i odevzdání vytištěné zprávy, která zahrnuje výše uvedené součásti projektu.
 
-V rámci projektu se odevzdávají postupně dva výsledky a poté je závěrečná obhajoba projektu.
+Každý odevzdaný výsledek bude hodnocen vyučujícím a za správné řešení lze získat až 5 bodů za první výsledek a až 29 bodů za druhý výsledek (celkem až 34 bodů za celý projekt).
 
-    - Obhajoby projektů budou probíhat v posledním týdnu semestru a prvním týdnu zkouškového období.
-    - Studenti se přihlásí na jeden z termínů obhajoby, které budou vypsány v informačním systému. Za každý tým se na obhajobu přihlašuje pouze jeden student.
-    - Obhajoba projektu by měla trvat přibližně 10 minut. Na obhajobě se musí podílet všichni členové řešitelského týmu (každý musí být připraven obhajovat některou z odevzdávaných částí projektu). Jedním z kritérií hodnocení projektu je připravenost na obhajobu a kvalita obhajoby. Pokud se během obhajoby prokáže, že studenti nerozumí odevzdávaným diagramům, mohou být za daný diagram uděleny i záporné body.
-    - Součástí je také odevzdání vytištěné zprávy zahrnující výše uvedené součásti projektu na obhajobě.
+Další podmínky hodnocení:
 
-Každý odevzdaný výsledek bude ohodnocen vyučujícím a za správné řešení můžete získat v případě prvního výsdledku až 5 bodů a v případě druhého až 29 bodů (tj. až 34 bodů za celý projekt).
-
-    - vážnější chyby a nedostatky a neúplnost budou penalizovány snížením počtu bodů
-    - vyšší hodnocení bude udělováno v případě nadprůměrných projektů, které se budou vyznačovat nadprůměrnou kvalitou provedení výše uvedeného rozsahu, vytvořením dalších (explicitně nepožadovaných) modelů, použitím dalších návrhových vzorů, kvalitní obhajobou apod.; takový projekt může získat nejen maximální hodnocení, ale i prémiové body navíc
-    - je silně doporučeno udělat před odevzdáním v rámci týmu interní oponenturu, kde se všichni členové týmu snaží nalézt v řešení případné nedostatky a tyto později opravit
-    - pokud dojde v průběhu řešení projektu k odpadnutí některých členů týmu (např. z důvodu zrušení zápisu předmětu či odstoupení od řešení), je potřeba to v týmu řešit co nejdříve nebo, pokud je problém, nahlásit situaci vyučujícímu; případní odpadlíci, nahlaste kolegům svou absenci co nejdříve, ať mají možnost projekt úspěšně dokončit
-    - při hodnocení se bude přihlížet k velikosti řešitelského týmu; výše požadovaný obsah řešení (např. počty diagramů) platí pro dvoučlenný tým a u většího týmu se předpokládá řešení složitějšího systému (ne měřeno větším počtem jednodušších případů použití, ale s celkově širším "záběrem")
-
+- Vážné chyby a nedostatky, neúplnost budou penalizovány snížením počtu bodů.
+- Vyšší hodnocení bude uděleno za nadprůměrné projekty, které vynikají kvalitou provedení, vytvořením dalších (explicitně nepožadovaných) modelů, použitím dalších návrhových vzorů, kvalitní obhajobou apod. Takový projekt může získat nejen maximální hodnocení, ale i prémiové body navíc.
+- Silně se doporučuje provést interní oponenturu v týmu před odevzdáním, kde se všichni členové snaží nalézt případné nedostatky a tyto opravit.
+- V případě odpadnutí některých členů týmu během řešení projektu (např. z důvodu zrušení zápisu předmětu nebo odstoupení) je potřeba tuto situaci co nejdříve řešit nebo nahlásit vyučujícímu.
+- Při hodnocení se zohlední velikost týmu; požadavky na rozsah řešení platí pro dvoučlenný tým, a u většího týmu se očekává složitější systém s širším záběrem (ne pouze větší počet jednodušších případů užití).
